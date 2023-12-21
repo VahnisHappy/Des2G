@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+
+}
+
+div.map-component {
+    /*font-size: 16px;*/
+    display:inline-block;
+    justify-content: space-between;
+    margin-top: 0.9em;
+    /*margin-left: 1em;*/
+    /*background: #f7f7f7;*/
+    border-radius: 15px;
+    width: 1375px;
+    height: 765px;
+    float: left;
+}

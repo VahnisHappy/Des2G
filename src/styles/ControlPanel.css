@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+div.controlPanel {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    margin-left: 2em;
+    background: #f7f7f7;
+    width: 400px;
+    height: 765px;
+    border-radius: 15px;
+    align-items: flex-start;
+}
+
+div.inputContainer {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    padding: 16px 16px 0 16px;
+}
+
+div.controlPanel >div{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.text{
+    align-self: flex-start;
+}
+
+input{
+    margin-top: 10px;
+    font-weight: 400;
+    padding: 1em;
+    /*width: 350px;*/
+    height: 60px;
+    border-radius: 15px;
+    border: 0;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+button{
+    height: 53px;
+    width: 121px;
+    margin-left: 12em;
+    border-radius: 30px;
+    background: black;
+    color: white;
+}
+
