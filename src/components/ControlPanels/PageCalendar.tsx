@@ -6,6 +6,10 @@ export default function() {
                 <div><input placeholder="enter service name"/></div>
             </div>
 
+            <div className="inputContainer">
+                <div className="text">start date</div>
+            </div>
+
         </>
     );
 }

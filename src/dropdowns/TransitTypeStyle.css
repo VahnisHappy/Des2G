@@ -1,13 +1,18 @@
-.container{
+.container-transitType{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
+    height: 45px;
 }
 
-select{
+.select{
     margin-top: 10px;
     padding: 3px;
+    border-radius: 15px;
+}
 
+.select:focus{
+    border: 1px solid #555;
 }
 
 select:focus-visible{

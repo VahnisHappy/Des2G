@@ -1,105 +1,153 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Roboto", serif;
-  font-size: 22px;
-  font-weight: 600;
 }
 
 div.menubar {
-  margin-top: 20px;
+  font-size: 1.25em;
+  font-weight: 600;
   display: flex;
-  width: 100vw;
-}
-
-div.menubar > div {
-  margin-left: 2em;
-  padding: .5em;
+  width: 100%;
+  height: 35px;
+  /*padding: 16px 32px 0 32px;*/
 }
 
 div.logo{
-  background: black;
-  color: white;
-  width: 173px;
-  margin-right: 17em;
-}
-
-div.container {
   display: flex;
-  background: #f7f7f7;
-  border-radius: 50px;
-  height: 50px;
-  width: 800px;
-  margin-right: 2em;
-  text-align: center;
+  align-items: center;
+
+  /*justify-content: center;*/
+  /*display: flex;*/
+  /*margin-right: auto;*/
+  /*color: black;*/
+  /*width: 100%;*/
+  /*height: fit-content;*/
+  flex: 1;
 }
 
-div.container > div {
-  /*width: 200px;*/
-  /*width: min(95%, 45rem);*/
-  height: 50px;
-  margin: 0 auto;
-  padding: 0 16px;
-  color: rgba(0, 0, 0, 0.5);
+.img{
+  width: 40px;
+  height: 100%;
+}
+
+.pipe{
+  border-left: 5px solid #000;
+  height: 100%;
+  margin-left: 4px;
+}
+
+.logoText{
+  margin-left: 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+div.container{
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+div.tabs{
+  display: flex;
+  background: white;
+  /*padding: 16px;*/
+  border-radius: 80px;
+  box-shadow: 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  /*overflow: hidden;*/
+  /*position: relative;*/
+}
+
+.tabs *{
+  z-index: 4;
+}
+
+input[type=radio]{
+  display: none;
+}
+
+.tab{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;  /* 45px*/
+  width: 160px; /*200px*/
+  border-radius: 80px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+  /*color:  #CED9BF;*/
+  color: #0B0E16;
+}
+
+/*.badge{*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  width: 2rem;*/
+/*  height: 2rem;*/
+/*  margin-left: 14px;*/
+/*  border-radius: 50%;*/
+/*  background: #FF8819;*/
+/*}*/
+
+/*input[type]:checked + label{*/
+/*    color: #042100;*/
+/*}*/
+
+/*input[type=radio]:checked + label > .badge{*/
+/*  background: #042100;*/
+/*  color: white;*/
+/*}*/
+
+input[id=radio-1]:checked ~ .slider{
+  transform: translateX(0);
+}
+
+input[id=radio-2]:checked ~ .slider{
+  transform: translateX(100%);
+}
+
+input[id=radio-3]:checked ~ .slider{
+  transform: translateX(200%);
+}
+
+input[id=radio-4]:checked ~ .slider{
+  transform: translateX(300%);
+}
+
+.slider{
+  position: absolute;
+  display: flex;
+  height: 35px; /*40px*/
+  width: 160px;
+  /*background: #E86E1A; !*#FF8819;*!*/
+  background: #FF8819;
+  z-index: 1;
+  border-radius: 80px;
+  transition: 0.25s ease-out;
+}
+
+@media (max-width: 760px) {
+  .tabs{
+    transform: scale(0.6);
+  }
+
 }
 
 div.preview{
-  display: flex;
-  background: #bdbdbd;
-  color: white;
-  border-radius: 10px;
-  width: 7rem;
+  align-items: center;
   justify-content: center;
-
+  display: flex;
+  background: white;
+  width: 11rem; /*8rem*/
+  height: 100%; /*35px*/
+  border-radius: 80px;
+  box-shadow: 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  margin-left: 3em;
 }
-
-
-
-/*.logo {*/
-/*  margin-top: 20px;*/
-/*  !* width: 100%;*/
-/*  height: 100vh; *!*/
-/*  position: absolute;*/
-/*}*/
-
-/*.preview {*/
-/*  margin-top: 20px;*/
-/*  margin-right: 20px;*/
-/*  position: absolute;*/
-/*}*/
-
-/*div.container {*/
-/*  background: #f7f7f7;*/
-/*  align-items: center;*/
-/*  border-radius: 50px;*/
-/*  padding: 10px;*/
-/*  height: 75px;*/
-/*  width: 800px;*/
-/*}*/
-
-/*div.container ul li {*/
-/*  list-style: none;*/
-/*  display: inline-block;*/
-/*  padding: 13px 35px;*/
-/*  margin: 10px;*/
-/*  font-size: 28px;*/
-/*  font-weight: 600;*/
-/*  cursor: pointer;*/
-/*  color: rgba(0, 0, 0, 0.5);*/
-/*  position: relative;*/
-/*  z-index: 2;*/
-/*}*/
-
-/* nav ul li::after {
-  content: "";
-  background: #ff8819;
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-} */

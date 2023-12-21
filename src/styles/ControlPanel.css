@@ -3,28 +3,25 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", serif;
-    font-size: 22px;
-    font-weight: 600;
 }
 
 div.controlPanel {
-    font-size: 12px;
-    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    flex: 1 1 0;
     flex-direction: column;
-    margin-top: 3em;
-    margin-left: 2em;
+    margin-top: 16px;
     background: #f7f7f7;
-    width: 400px;
-    height: 765px;
     border-radius: 15px;
     align-items: flex-start;
+
 }
 
 div.inputContainer {
     flex-direction: column;
     margin: 0 auto;
     width: 100%;
-    padding: 16px 16px 0 16px;
+    padding: 0 0 16px 0;
 }
 
 div.controlPanel >div{
@@ -32,28 +29,49 @@ div.controlPanel >div{
     justify-content: space-between;
 }
 
-div.text{
+div.title{
     align-self: flex-start;
 }
 
-input{
-    margin-top: 10px;
-    font-weight: 400;
-    padding: 1em;
-    /*width: 350px;*/
-    height: 60px;
-    border-radius: 15px;
-    border: 0;
-    margin-bottom: 1em;
-    width: 100%;
+input[type="text"]{
+    /*width: 90%;*/
+    /*margin-top: 20px;*/
+    /*align-items: flex-start;*/
+    /*border: 1px solid #ccc;*/
+    /*!*outline: none;*!*/
+    /*display: inline-block;*/
+    /*height: 45px;*/
+    /*vertical-align: middle;*/
+    /*position: relative;*/
+    /*bottom: 14px;*/
+    /*!*right: 9px;*!*/
+    /*border-radius: 15px;*/
+    /*box-sizing: border-box;*/
+    /*padding: 0 18px;*/
+
+    font-size: 18px;
+    width: 90%;
+    height: 35px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 30px;
 }
 
-button{
-    height: 53px;
-    width: 121px;
-    margin-left: 12em;
-    border-radius: 30px;
-    background: black;
-    color: white;
+input[type="text"]:focus{
+    border: 1px solid #555;
 }
+
+/*button{*/
+/*    height: 53px;*/
+/*    width: 121px;*/
+/*    margin-left: 12em;*/
+/*    border-radius: 30px;*/
+/*    background: black;*/
+/*    color: white;*/
+/*}*/
 

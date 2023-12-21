@@ -1,6 +1,7 @@
-export enum Page {
-    locationPage,
-    agencyPage,
-    calendarPage
+export enum PageNumbers {
+    pageLocation,
+    pageAgency,
+    pageCalendar,
+    pageTrip
 
 }
