@@ -1,0 +1,65 @@
+.navbar{
+    font-size: 1.25em;
+    font-weight: 600;
+    display: flex;
+    /*width: 100vw;*/
+    height: 35px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.tabs{
+    display: flex;
+    background: white;
+    /*padding: 16px;*/
+    border-radius: 80px;
+    box-shadow: 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+    /*height: 35px;*/
+    /*overflow: hidden;*/
+    /*position: relative;*/
+}
+
+.tabs * {
+    z-index: 4;
+}
+
+.tabs input[type=radio] {
+    display: none;
+}
+
+.tabs label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;  /* 45px*/
+    width: 160px; /*200px*/
+    border-radius: 80px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+    /*color:  #CED9BF;*/
+    color: #0B0E16;
+}
+
+.slider{
+    position: absolute;
+    display: flex;
+    height: 35px; /*40px*/
+    width: 160px;
+    /*background: #E86E1A; !*#FF8819;*!*/
+    background: #FF8819;
+    z-index: 1;
+    border-radius: 80px;
+    transition: 0.25s ease-out;
+}
+
+@media (max-width: 760px) {
+    .tabs{
+        transform: scale(0.6);
+    }
+
+}

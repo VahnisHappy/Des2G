@@ -1,0 +1,9 @@
+.datePicker {
+    font-family: Roboto, serif;
+    font-weight: 600;
+    width: 200px;
+    border-radius: 35px;
+    border: 1px solid #ccc;
+    padding: 12px;
+
+}
