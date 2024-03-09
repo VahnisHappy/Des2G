@@ -1,0 +1,42 @@
+
+.icon {
+    color: var(--background);
+    font-size: 20px;
+    transition: color 0.3s;
+    z-index: 1;
+}
+
+.icon_wrapper:hover .icon, .selected .icon {
+    color: var(--background);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon_wrapper::before, .selected::before {
+    content: '';
+    position: absolute;
+    top: 73%;
+    left: 78%;
+    width: 30px;
+    height: 30px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 8%;
+    background: var(--foreground);
+    transition: transform 0.3s, opacity 0.3s;
+    transform: scale(0);
+    opacity: 0;
+    z-index: 0;
+
+}
+
+.icon_wrapper:hover::before, .selected::before {
+    transform: scale(1);
+    opacity: 1;
+}
