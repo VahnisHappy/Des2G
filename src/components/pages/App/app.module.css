@@ -1,0 +1,30 @@
+.app {
+    width: 100vw;
+    height: 100vh;
+    font-weight: 600;
+}
+
+.content {
+    /*display: grid;*/
+    top: 24px;
+    left: 24px;
+    position: fixed;
+    width: calc(100vw - 48px);
+    height: calc(100vh - 48px);
+    /*display: flex;*/
+    /*padding: 10px 0 34px 0;*/
+}
+
+.appContainer {
+    display: flex;
+    height: calc(100vh - 84px);
+    padding: 12px 0 0 0;
+}
+
+.menuContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: -48px;
+}

@@ -1,0 +1,12 @@
+.button:hover {
+    background-color: #1D1D1D;
+}
+
+.button:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.button:focus-visible {
+    box-shadow: none;
+}

@@ -18,14 +18,18 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mapbox/mapbox-sdk": "^0.15.3",
+    "@mui/joy": "^5.0.0-beta.24",
     "@mui/material": "^5.15.1",
     "@mui/x-date-pickers": "^6.18.6",
     "@reduxjs/toolkit": "^2.0.1",
     "@types/mapbox__mapbox-sdk": "^0.13.11",
+    "@types/uuid": "^9.0.8",
     "dayjs": "^1.11.10",
+    "jszip": "^3.10.1",
     "localforage": "^1.10.0",
     "mapbox-gl": "^3.0.1",
     "match-sorter": "^6.3.1",
+    "mui-color-input": "^2.0.3",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,7 +40,8 @@
     "react-timezone-select": "^3.1.0",
     "redux": "^5.0.1",
     "sort-by": "^1.2.0",
-    "use-debounce": "^10.0.0"
+    "use-debounce": "^10.0.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/mapbox-gl": "^2.7.19",
