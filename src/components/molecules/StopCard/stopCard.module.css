@@ -1,0 +1,11 @@
+.header h2, p {
+    display: inline-block;
+}
+
+.header h2 {
+    margin: 0 10px 0 0;
+}
+
+.header p {
+    font-size: 8px;
+}

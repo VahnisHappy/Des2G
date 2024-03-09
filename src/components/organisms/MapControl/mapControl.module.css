@@ -1,0 +1,17 @@
+.container {
+    width: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.top-right {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: 10px;
+}

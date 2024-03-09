@@ -1,0 +1,56 @@
+.welcome {
+    height: 100%;
+    width: 100%;
+
+}
+
+.information {
+    margin-top: 120px;
+    grid-column-start: content1-start;
+    grid-column-end: content1-end;
+    margin-bottom: 15px;
+}
+
+.image {
+    grid-column-start: content2-start;
+    grid-column-end: content2-end;
+    height: calc(100% - 48px);
+    max-height: 500px;
+    max-width: 450px;
+    margin-bottom: 48px;
+    border-radius: 30px;
+    box-shadow: 0 48px 100px 0 rgba(17, 12, 46, .2);
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    height: 35px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    flex: 1;
+    user-select: none;
+    justify-content: space-between;
+
+}
+
+.content {
+    display: flex;
+    top: 24px;
+    left: 24px;
+    position: fixed;
+    width: calc(100vw - 48px);
+    height: calc(100vh - 48px);
+    /* display: flex; */
+    /* padding: 10px 0 34px 0; */
+}
+
+/*h2{*/
+/*    color: #1F211F;*/
+/*    font-weight: 900;*/
+/*    font-size: 32px;*/
+/*}*/
