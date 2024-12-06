@@ -1,7 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {RouteState} from "@/store/states";
-import {Point, Route, RouteIndex, StopIndex, StopTime} from "@/types";
-import {createStopTime} from "@/factory";
+import {Point, Route, RouteIndex, StopIndex} from "@/types";
 
 const initialState: RouteState = {
     data: [],
@@ -19,17 +18,17 @@ const routeSlice = createSlice({
         addStop: (state, {payload}: PayloadAction<StopIndex>) => {
             const route = state.data.find(r => r.edit);
             if (!route) return;
-            route.stopTimes = [...route.stopTimes, createStopTime(payload)];
+            route.stopIndexes = [...route.stopIndexes, payload];
         },
         removeStopByRouteIndex: (state, {payload}: PayloadAction<number>) => {
             const route = state.data.find(r => r.edit);
             if (!route) return;
-            route.stopTimes = route.stopTimes.filter((_, i) => i !== payload);
+            route.stopIndexes = route.stopIndexes.filter((_, i) => i !== payload);
         },
         removeStopByStopIndex: (state, {payload}: PayloadAction<StopIndex>) => {
             state.data.forEach(r => {
-                if (r.stopTimes.some(s => s.stopIndex !== payload)) r.path = [];
-                r.stopTimes = r.stopTimes.filter(s => s.stopIndex !== payload)
+                if (r.stopIndexes.some(s => s !== payload)) r.path = [];
+                r.stopIndexes = r.stopIndexes.filter(s => s !== payload)
             })
         },
         setRouteColor: (state, {payload}: PayloadAction<{ index: number, color: string }>) => {
@@ -38,11 +37,6 @@ const routeSlice = createSlice({
                     r.color = payload.color;
                 return r;
             })
-        },
-        setStopTime: (state, {payload}: PayloadAction<{ index: number, stopTime: StopTime }>) => {
-            const route = state.data.find(r => r.edit);
-            if (!route) return;
-            route.stopTimes = route.stopTimes.map((st, i) => i === payload.index ? payload.stopTime : st);
         },
         setPath: (state, {payload}: PayloadAction<Point[]>) => {
             const route = state.data.find(r => r.edit);

@@ -17,8 +17,8 @@ export function createRoute(color: string): Route {
     return {
         id: createField(""),
         name: createField(""),
-        stopTimes: [],
         path: [],
+        stopIndexes:[],
         color,
         edit: false,
         type: createField("")
@@ -37,7 +37,8 @@ export function createTrip(): Trip {
     return {
         id: createField(""),
         route: createField(null),
-        calendar: createField(null)
+        calendar: createField(null),
+        stopTimes: [],
     }
 }
 

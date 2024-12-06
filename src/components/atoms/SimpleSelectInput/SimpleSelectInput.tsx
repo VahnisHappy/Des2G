@@ -11,5 +11,8 @@ export type SimpleSelectInputProps = DefaultProps & {
 
 export default function SimpleSelectInput({options, ...props}: SimpleSelectInputProps) {
     const map = new Map(options.map(option => [option, option]));
-    return <SelectInput map={map} {...props}/>;
+    const handleChange = (value: string | number) => {
+        props.onChange?.(`${value}`);
+    }
+    return <SelectInput map={map} {...props} onChange={handleChange}/>;
 }

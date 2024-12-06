@@ -28,13 +28,13 @@ export type TripIndex = number;
 export type StopTime = {
     arrivalTime: Field<Time | null>,
     departureTime: Field<Time | null>,
-    stopIndex: StopIndex,
+    stopIndex: number
 }
 export type Route = {
     id: Field<string>,
     name: Field<string>,
-    stopTimes: StopTime[],
     path: Point[],
+    stopIndexes: StopIndex[],
     color: string,
     edit: boolean,
     type: Field<string>
@@ -55,6 +55,7 @@ export type Trip = {
     id: Field<string>,
     route: Field<RouteIndex | null>,
     calendar: Field<CalendarIndex | null>,
+    stopTimes: StopTime[],
 }
 export type BooleanDays = [boolean, boolean, boolean, boolean, boolean, boolean, boolean]; // Start with Monday
 export type Calendar = {

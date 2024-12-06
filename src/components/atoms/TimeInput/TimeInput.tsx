@@ -29,6 +29,6 @@ export default function TimeInput({field, onChange, label}: TimeInputProps) {
                 height: '40px',
                 padding: '0 14px',
             }
-        }} value={value} error={field.error} onChange={handleChange}/>
+        }} value={value} onChange={handleChange}/>
     </>
 }

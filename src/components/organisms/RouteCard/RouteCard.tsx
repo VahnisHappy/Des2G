@@ -3,10 +3,10 @@ import Card from "@/components/atoms/Card";
 import TextInput from "@/components/atoms/TextInput/index.ts";
 import ButtonInput from "@/components/atoms/ButtonInput/index.ts";
 import {Stack} from "@mui/material";
-import {Route, StopTime} from "@/types";
+import {Route} from "@/types";
 import ColorInput from "@/components/atoms/ColorInput";
 import TransitTypeSel from "@/components/molecules/TransitTypeSel";
-import StopTimesList from "@/components/organisms/StopTimesList";
+
 
 type RouteCardProps = {
     route: Route,
@@ -24,7 +24,7 @@ export default function RouteCard({route, onColorChange, onChange, ...props}: Ro
     const handleIDChange = (value: string) => onChange?.({...route, id: {value}});
     const handleNameChange = (value: string) => onChange?.({...route, name: {value}});
     const handleTransitTypeChange = (value: string) => onChange?.({...route, type: {value}});
-    const handleStopTimesChange = (stopTimes: StopTime[]) => onChange?.({...route, stopTimes})
+    // const handleStopTimesChange = (stopTimes: StopTime[]) => onChange?.({...route, stopTimes})
     return (
         <Card>
             <Stack direction="row" spacing={1} className={style.header}>
@@ -37,8 +37,7 @@ export default function RouteCard({route, onColorChange, onChange, ...props}: Ro
             <TextInput label="name" placeholder="name" field={route.name} onChange={handleNameChange}/>
             <p>transit type</p>
             <TransitTypeSel field={route.type} onChange={handleTransitTypeChange}/>
-            <StopTimesList label="stops time" stopTimes={route.stopTimes} onChange={handleStopTimesChange} />
-            <hr style={{background: "#000000", height: "1px", border: "none", marginBottom: "7px",marginTop: "14px"}}/>
+            <hr style={{background: "#000000", height: "1px", border: "none", marginBottom: "5px",marginTop: "5px"}}/>
             <ColorInput label="color" value={route.color} onChange={onColorChange}/>
         </Card>
     );

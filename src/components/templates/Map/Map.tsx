@@ -22,12 +22,10 @@ export default function Map() {
     const currentEditedRoute = routes.find(route => route.edit);
     React.useEffect(() => {
         if (!currentEditedRoute) return;
-        const points: Point[] = currentEditedRoute.stopTimes
-            .map(stopTime => stopTime.stopIndex)
-            .map(idx => stops[idx]);
+        const points: Point[] = currentEditedRoute.stopIndexes.map(idx => stops[idx]);
         if (points.length < 2) dispatch(RouteActions.setPath([]));
         else direction(points).then(path => dispatch(RouteActions.setPath(path)))
-    }, [currentEditedRoute?.stopTimes, stops])
+    }, [currentEditedRoute?.stopIndexes, stops])
 
     const handleMapDisplayClick = (e: MapLayerMouseEvent) => {
         const target = e.originalEvent.target as HTMLElement;
@@ -40,8 +38,6 @@ export default function Map() {
         if (mode === "pin") dispatch(StopActions.focusStop(index));
         else if (mode === "draw") handleDraw(index);
     }
-
-
 
     return<MapDisplay onClick={handleMapDisplayClick}>
         <MapControl position="top-right"/>
