@@ -14,13 +14,13 @@ export default function DatePickerInput({label, field, onChange}: DatePickerInpu
         if (!x) return onChange?.(null);
         onChange?.({
             date: x.date(),
-            month: x.month(),
+            month: x.month() + 1,
             year: x.year()
         })
     }
     const toDayjs = (date: ADate | null): Dayjs | null => {
         if (!date) return null;
-        return dayjs(new Date(date.year, date.month, date.date))
+        return dayjs(new Date(date.year, date.month - 1, date.date))
     }
     return <>
         <div>{label}</div>

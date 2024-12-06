@@ -3,7 +3,7 @@ import React from "react";
 import style from "./selectInput.module.css"
 import {DefaultProps, Field} from "@/types";
 
-export type SelectInputProps<T extends React.ReactNode, U = string | number> = DefaultProps & {
+export type SelectInputProps<T, U> = DefaultProps & {
     label?: string,
     map: Map<U, T>,
     field: Field<U | null>,
@@ -11,15 +11,16 @@ export type SelectInputProps<T extends React.ReactNode, U = string | number> = D
 }
 
 
-export default function SelectInput<T extends React.ReactNode, U = string | number>(props: SelectInputProps<T, U>) {
+export default function SelectInput(props: SelectInputProps<string, string | number>) {
     const uniqueId = React.useId();
     const labelId = `${uniqueId}-label`;
+    const kvs = [...props.map.entries()].map(([k, v]) => ({k, v}))
     return <FormControl>
         <div>{props.label}</div>
         <Select className={style.select} value={`${props.field.value}` || ""} error={props.field.error}
-                onChange={event => props.onChange?.(event.target.value as U)} labelId={labelId} label={props.label}>
-            {[...props.map.entries()].map(([value, item], index) => <MenuItem key={index}
-                                                                              value={value}>{item}</MenuItem>)}
+                onChange={event => props.onChange?.(event.target.value)} labelId={labelId} label={props.label}>
+            {kvs.map(kv => <MenuItem value={kv.v}>{kv.v}</MenuItem>)}
+            {[...props.map.entries()].map(([value, item], index) => <MenuItem key={index} value={value}>{item}</MenuItem>)}
         </Select>
     </FormControl>
 

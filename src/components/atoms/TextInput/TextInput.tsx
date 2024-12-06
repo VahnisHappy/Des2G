@@ -21,7 +21,8 @@ export default function TextInput(props: TextInputProps) {
             <TextField id={uniqueId} value={props.field.value} onFocus={handleFocusChange} onChange={handleInputChange} placeholder={props.placeholder} sx={{
                 width: '100%',
                 '& .MuiOutlinedInput-root': {
-                    borderRadius: '12px'
+                    borderRadius: '12px',
+                    marginBottom: '10px'
                 },
                 '& .MuiOutlinedInput-input': {
                     height: '40px',

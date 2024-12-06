@@ -92,7 +92,7 @@ export default class SimpleGTFS implements GTFS {
 
     private _stopTimeText(): string {
         const head = ["trip_id", "arrival_time", "departure_time", "stop_id", "stop_sequence"].join(",");
-        const body = this.trips.map(trip => this.routes[trip.route.value!].stopTimes.map((stopTime, index) => [trip.id.value, this._formatTime(stopTime.arrivalTime?.value), this._formatTime(stopTime.departureTime?.value), this.stops[stopTime.stopIndex].id.value, index].join(",")).join("\n"));
+        const body = this.trips.map(trip => trip.stopTimes.map((stopTime, index) => [trip.id.value, this._formatTime(stopTime.arrivalTime?.value), this._formatTime(stopTime.departureTime?.value), this.stops[stopTime.stopIndex].id.value, index].join(",")).join("\n"));
         return [head, ...body].join("\n");
     }
 

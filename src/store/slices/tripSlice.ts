@@ -17,7 +17,7 @@ const tripSlice = createSlice({
         },
         setTrips: (state, {payload}: PayloadAction<Trip[]>) => {
             state.data = payload;
-        }
+        },
     }
 });
 
